@@ -1,13 +1,18 @@
-
-import Sidebar from './assets/SideBar/Sidebar.jsx';
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./assets/Dashboard/Dashboard";
+import News from "./assets/News/news";
 
 function App() {
   
 
   return (
     <>
-        <Sidebar />
+        <Router>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/news" element={<News />} />
+      </Routes>
+    </Router>
     </>
   )
 }
